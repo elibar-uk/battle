@@ -14,6 +14,7 @@ describe 'hit_points' do
     expect(bob.hit_points).to eq described_class::DEFAULT_HIT_POINTS
   end
 end
+
 describe '#attack' do
   it 'damages the player' do
     expect(mike).to receive(:get_damage)
