@@ -9,7 +9,6 @@ class Player
 
   def receive_damage
     @hit_points -= 10
-  #  fail "You lose #{@name}" if @hit_points == 0
   end
 
 end

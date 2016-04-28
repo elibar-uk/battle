@@ -6,6 +6,7 @@ describe Game do
 
   let(:player_1) { double(:player) }
   let(:player_2) { double(:player) }
+  let(:loser) { Player.new('Loser', 10) }
 
   describe '#player_1' do
     it 'retrieves the first player' do
@@ -43,6 +44,14 @@ describe Game do
     it 'finds the opponent of a player' do
       expect(game.opponent_of(player_1)).to eq player_2
       expect(game.opponent_of(player_2)).to eq player_1
+    end
+  end
+
+  describe '#game_over?' do
+    it 'return true if one player has 0HP' do
+      loser.receive_damage
+      lost_game = Game.new(loser,player_2)
+      expect(lost_game.game_over?).to eq true
     end
   end
 

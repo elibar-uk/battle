@@ -30,6 +30,10 @@ class Game
     @players.select { |player| player != the_player }.first
   end
 
+  def game_over?
+    @current_turn.hit_points == 0
+  end
+
   private
   attr_reader :players
 
