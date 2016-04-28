@@ -1,9 +1,18 @@
+<link href="/style.css" type="text/css" rel="stylesheet">
+<font size = "30"; color = "white">
+<div align = "center">
 <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
+</div>
 <br>
 <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
+<img src="Elmo.png">
 <br>
 <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
+<img src="Cookie.jpg" width="200" height="240">
 <br>
+<div align = "center">
 <%= @game.current_turn.name %>'s turn
 <br>
 <a href="/attack">Attack</a>
+</div>
+</font>
