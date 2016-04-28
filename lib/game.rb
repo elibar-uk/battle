@@ -32,5 +32,5 @@ class Game
 
   private
   attr_reader :players
-  
+
 end
