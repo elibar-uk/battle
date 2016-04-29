@@ -1,15 +1,15 @@
 <link href="/style.css" type="text/css" rel="stylesheet">
-<%= @game.player_1.name %> attacked <%= @game.player_2.name %>
-<br>
-<%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
-<br>
-<%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
-<br>
 <% if @game.current_turn == @game.player_1 %>
 <%= @game.player_1.name %> attacked <%= @game.player_2.name %>
 <% else %>
 <%= @game.player_2.name %> attacked <%= @game.player_1.name %>
 <% end %>
+<br>
+<%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
+<br>
+<%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
+<br>
+
 
 <form action='/switch-turns' method='post'>
   <input type='submit' value='OK'>
