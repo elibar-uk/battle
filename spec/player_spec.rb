@@ -10,8 +10,4 @@ describe Player do
       expect(player_1.player_name).to eq('maggie')
     end
   end
-
-
-
-
 end
